@@ -158,6 +158,24 @@ main {
     justify-content: center;
 }
 
+#times div {
+    color: #afafaf;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
+     /* Creates a grid of meetup time divs over the background image */
+     border: 2px solid white;
+}
+
+#times h3 {
+    /* Override the heading colour set in general styles */
+    color: #fafafa;
+}
+
 /* gallery section*/
 #photos img{
     width: 100%;
@@ -178,6 +196,14 @@ main {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -234,6 +260,12 @@ main {
     text-align: end;
     align-self: flex-end;
  }
+
+
+/* Gallery */
+#photos {
+   column-count: 3;
+}
 }
 /* Meetup Times section */
 #times {
@@ -243,31 +275,16 @@ main {
     flex-wrap: wrap;
 }
 
-#times div {
-    color: #afafaf;
-    background-color: rgba(0, 0, 0, .6);
-    padding: 15px;
-    text-align: center;
-    /* This will not wrap on screens of less than 400px wide.
-    Each div will expand to fill the available space on its row */
-    flex-basis: 200px;
-    flex-grow: 1;
-     /* Creates a grid of meetup time divs over the background image */
-     border: 2px solid white;
-}
-
-#times h3 {
-    /* Override the heading colour set in general styles */
-    color: #fafafa;
-}
-
  /* larger devices (laptops and desktops 992px and up)*/
  @media screen and (min-width: 992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
     }
 
-    
+     /* Gallery */
+     #photos {
+        column-count: 4;
+    } 
 }
 
 @media screen and (min-width: 1200px) {    
