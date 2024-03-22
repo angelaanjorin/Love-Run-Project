@@ -137,29 +137,38 @@ main {
         width: fit-content;
         padding-right: 1rem;
     }
-    
+
     #menu{
         display: flex;
     }
-    #menu > li {
+
+    #menu > li{
         padding-left: 1rem;
     }
+
     .nav-toggle-label{
         display: none;
     }
+
     #logo{
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
+
     /* Main content*/
     main{
         /* push main content to accomodate larger header*/
         margin-top: 98px;
     }
-
-   
+/* Hero*/
+#cover-text{
+    width: 300px;
+    right: 50px;
 }
+}
+
+
 
  /* larger devices (laptops and desktops 992px and up)*/
  @media screen and (min-width: 992px) {
